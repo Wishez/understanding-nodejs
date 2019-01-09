@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello, Pale!</title>
+
+  <link rel="stylesheet" href="/bulma/css/bulma.min.css" media="screen"/>
+  <link rel="stylesheet" href="/static/style/main.css" />
+</head>
+<body>
+  <header class="header offsets">
+    <h1 class="logo"><a href="/">Халло ворлд</a></h1>
+
+    <p class="headerNote">Новые фичи браузверя уже доступны</p>
+
+    <!-- <form action="/search" methods="GET" class="unstyled">
+      <label class="visibility-hidden" id="searchLabel" for="search">Search</label>
+      <input name="search" type="search" placeholder="Search" aria-labelledby="searchLabel">
+
+      <button type="submit">Search</button>
+    </form> -->
+  </header>
+
+  <main class="container">
+    <h1 class="title">Скажи что-нибудь умное</h1>
+
+    <form id="speechForm">
+        <label id="speechTextLabel" for="speechText">Предложение</label>
+        <input 
+          name="speeachText"
+          id="speechText"
+          aria-labelledby="speechTextLabel"
+          placeholder="Только ваша фантазия способна сделать ваше предложение классным!"
+        />
+
+        <button class="button" type="submit">Слушать</button>
+        <button class="button" id="placeholderSpeech" type="button">Протестировать</button>
+    </form>
+    <!-- <p>I hope this content will be pleasure for you.</p> -->
+
+    <!-- <section class="container"> -->
+      <!-- <h2>Do you want get request data at your server?</h2> -->
+
+      <!-- <form action="/test-request" method="POST">
+        <label id="recepientNameLabel" for="recepientName">Recepient Name</label>
+        <input name="recepientName" id="recepientName" aria-labelledby="recepientNameLabel" type="text" placeholder="Egvin">
+
+        <button type="submit">Press enter</button>
+      </form> -->
+    <!-- </section> -->
+  </main>
+
+  <footer class="offsets">
+    <p>Created by the developer who don't have a girlfriend&copy;2018</p>
+  </footer>
+
+  <script src="/static/script/main.js" async></script>
+</body>
+</html>

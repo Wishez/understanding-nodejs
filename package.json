@@ -1,0 +1,19 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "The project for learning Node.js",
+  "main": "users.js",
+  "author": "Filipp Zhuravlev<shiningfinger@list.ru>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon users.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.7.2",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  }
+}
