@@ -1,37 +1,34 @@
-const path = require('path')
-const http = require('http')
 const express = require('express')
 const morgan = require('morgan')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const _ = require('./helpers')
+const adminRoutes = require('./routes/admin')
+const shopRoutes = require('./routes/shop')
 
-const routes = require('./routes')
-
-const resolve = (pathName) => {
-  return path.join(process.cwd(), pathName)
-}
-
-// const app = express()
+const app = express()
 
 // Addons
-// app.use(morgan())
+app.use(morgan('dev'))
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+app.use(cors())
 
 // Static files
-// app.use('/static', express.static(resolve('static')))
-// app.use(express.static(resolve('node_modules')))
-
+app.use('/static', express.static(_.resolvePath('static')))
+app.use(express.static(_.resolvePath('node_modules')))
 
 // routes
-// app.use('/', (req, res) => {
-//   console.log(req.url)
-//   res.sendFile(resolve('static/hello.html'))
-// })
+app.use(adminRoutes)
+app.use(shopRoutes)
 
-// Server
-const PORT = 3080
-// const server = http.createServer(app)
-const server = http.createServer(routes.handler)
-
-server.listen(PORT, () => {
-  console.log(`Server listen on ${PORT} port`)
+app.use('/', (req, res) => {
+  console.log(req.url)
+  _.showPage(res, '404.html')
 })
 
-// fs.writeFileSync('hello.txt', 'Hello from Node.js')
+// Server
+const PORT = 6080
+app.listen(PORT, () => {
+  console.log(`Server listen on ${PORT} port`)
+})

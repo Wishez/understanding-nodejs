@@ -2,17 +2,18 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "The project for learning Node.js",
-  "main": "users.js",
+  "main": "app.js",
   "author": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon users.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "bulma": "^0.7.2",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "morgan": "^1.9.1"
   },
