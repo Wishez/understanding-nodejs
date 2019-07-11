@@ -11,10 +11,10 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/buy-product', (req, res, next) => {
-  showShopPage(res, 'add-product')
+  showShopPage(res, 'buy-product')
 })
 
-router.post('api/buy-product', (req, res, next) => {
+router.post('/api/buy-product', (req, res, next) => {
   console.log(req.body)
 })
 

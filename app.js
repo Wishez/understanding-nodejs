@@ -19,11 +19,12 @@ app.use('/static', express.static(_.resolvePath('static')))
 app.use(express.static(_.resolvePath('node_modules')))
 
 // routes
-app.use(adminRoutes)
+app.use('/admin', adminRoutes)
 app.use(shopRoutes)
 
-app.use('/', (req, res) => {
+app.use((req, res) => {
   console.log(req.url)
+  res.status(404)
   _.showPage(res, '404.html')
 })
 

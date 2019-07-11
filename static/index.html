@@ -4,16 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hello, Pale!</title>
+  <title>{{title}}</title>
 
   <link rel="stylesheet" href="/bulma/css/bulma.min.css" media="screen"/>
   <link rel="stylesheet" href="/static/style/main.css" />
 </head>
 <body>
   <header class="header offsets">
-    <h1 class="logo"><a href="/">Халло ворлд</a></h1>
+    <h1 class="logo"><a href="/">Соул-шоп</a></h1>
 
-    <p class="headerNote">Новые фичи браузверя уже доступны</p>
+    <nav aria-label="Ссылки по всем страницам сайта">
+      <ul class="navigationList">
+        <li class="navigationList__pageLink"><a href="/home">Home</a></li>
+
+        <li class="navigationList__pageLink"><a href="/buy-product">Souls</a></li>
+      </ul>
+    </nav>
+
+    <p class="headerNote">Шмалим дурь, курим шмаль, пиво пьём</p>
   </header>
 
   <main class="container">
@@ -21,7 +29,7 @@
   </main>
 
   <footer class="offsets">
-    <p>Created by the developer who don't have a girlfriend&copy;2018</p>
+    <p>Супер креативная разработка&copy;2018-2019</p>
   </footer>
 
   <script src="/static/script/main.js" async></script>
